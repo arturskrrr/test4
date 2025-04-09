@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Portfolio</title>
+  <style>
+    :root {
+      --primary-color: #4f46e5;
+      --bg-color: #f9fafb;
+      --text-color: #111827;
+      --card-bg: #ffffff;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      line-height: 1.6;
+    }
+
+    header {
+      background: var(--primary-color);
+      color: white;
+      padding: 1rem;
+      text-align: center;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+      padding: 1rem;
+      background-color: #e0e7ff;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: var(--primary-color);
+      font-weight: bold;
+    }
+
+    section {
+      padding: 2rem 1rem;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .card {
+      background: var(--card-bg);
+      padding: 1.5rem;
+      margin-bottom: 1.5rem;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    }
+
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1rem;
+    }
+
+    footer {
+      background-color: #e0e7ff;
+      text-align: center;
+      padding: 1rem;
+    }
+
+    @media (max-width: 600px) {
+      nav {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>Welcome to My Portfolio</h1>
+  </header>
+
+  <nav>
+    <a href="#about">About Me</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+    <a href="#social">Social Media</a>
+  </nav>
+
+  <section id="about">
+    <div class="card">
+      <h2>About Me</h2>
+      <p>Hello! I'm a passionate developer with a love for creating modern web experiences. I enjoy solving problems and learning new technologies.</p>
+    </div>
+  </section>
+
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="projects-grid">
+      <div class="card">
+        <h3>Project One</h3>
+        <p>A cool web app that solves a problem.</p>
+      </div>
+      <div class="card">
+        <h3>Project Two</h3>
+        <p>An innovative tool built with JavaScript and APIs.</p>
+      </div>
+      <div class="card">
+        <h3>Project Three</h3>
+        <p>A mobile-friendly design for an e-commerce platform.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="card">
+      <h2>Contact</h2>
+      <form id="contactForm">
+        <input type="text" placeholder="Your Name" required style="width: 100%; margin-bottom: 1rem; padding: 0.5rem;" />
+        <input type="email" placeholder="Your Email" required style="width: 100%; margin-bottom: 1rem; padding: 0.5rem;" />
+        <textarea placeholder="Your Message" required style="width: 100%; margin-bottom: 1rem; padding: 0.5rem;"></textarea>
+        <button type="submit" style="padding: 0.5rem 1rem; background-color: var(--primary-color); color: white; border: none; border-radius: 5px;">Send</button>
+      </form>
+    </div>
+  </section>
+
+  <section id="social">
+    <div class="card">
+      <h2>Social Media</h2>
+      <ul>
+        <li><a href="#" target="_blank">LinkedIn</a></li>
+        <li><a href="#" target="_blank">GitHub</a></li>
+        <li><a href="#" target="_blank">Twitter</a></li>
+      </ul>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 My Portfolio. All rights reserved.</p>
+  </footer>
+
+  <script>
+    document.getElementById('contactForm').addEventListener('submit', function (e) {
+      e.preventDefault();
+      alert('Thank you for your message!');
+      this.reset();
+    });
+  </script>
+</body>
+
+</html>
